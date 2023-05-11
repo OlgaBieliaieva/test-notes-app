@@ -9,6 +9,7 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [filter, setFilter] = useState('');
   const [disabled, setDisabled] = useState(true);
+
   const savedNotes = localStorage.getItem('notes');
   const parsedNotes = JSON.parse(savedNotes);
 
@@ -19,7 +20,6 @@ function App() {
       });
       setNotes([...disActive]);
     }
-
     // eslint-disable-next-line
   }, []);
 
